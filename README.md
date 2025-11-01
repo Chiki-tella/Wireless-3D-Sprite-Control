@@ -1,58 +1,63 @@
-#Wireless 3D Sprite Control Using Arduino & Python
+🎮 Wireless 2D/3D Sprite Control Using Arduino & Python (Pygame)
+🧩 Project Overview
 
-Project Overview:
-This project demonstrates real-time wireless control of a 3D sprite using an Arduino UNO equipped with an MPU6050 motion sensor and an HC-05 Bluetooth module. Sensor readings from the Arduino — including accelerometer and gyroscope data — are transmitted wirelessly to a Python application running the Ursina 3D engine, which updates the sprite’s position, rotation, and color dynamically.
+This project demonstrates real-time wireless control of a game sprite using an Arduino UNO and a joystick module, connected via an HC-05 Bluetooth module.
+Joystick readings from the Arduino — representing directional and button inputs — are transmitted wirelessly to a Python application built with Pygame, which updates the sprite’s position, rotation, and color dynamically.
 
-Key Features:
+⚙️ Key Features
 
-Real-time 3D sprite control via motion input
+Real-time sprite movement and rotation using joystick input
 
-Wireless communication using HC-05 Bluetooth module
+Wireless Bluetooth communication through HC-05
 
-Accelerometer and gyroscope integration via MPU6050
+Joystick integration for analog directional control and button press detection
 
-Dynamic color changes and rotation based on tilt
+Dynamic color and speed adjustments based on joystick values
 
-Fully modular Python code using Ursina for 3D visualization
+Modular Python–Arduino architecture using Pygame for visualization
 
-Safe serial handling to prevent port errors
+Safe serial communication handling to prevent port connection errors
 
-Technologies Used:
+🧠 Technologies Used
 
 Arduino UNO
 
-MPU6050 Motion Sensor
+Joystick Module (2-axis + button)
 
 HC-05 Bluetooth Module
 
 Python 3.13
 
-Ursina 3D Engine
+Pygame Library
 
-PySerial
+PySerial for Bluetooth communication
 
-How It Works:
+🔄 How It Works
 
-Arduino reads motion data from MPU6050.
+The Arduino reads analog values from the joystick’s X and Y axes and the digital button pin.
 
-Data is transmitted wirelessly via HC-05 to a paired PC.
+These values are transmitted wirelessly via the HC-05 Bluetooth module to the PC.
 
-Python script reads Bluetooth data and updates a 3D sprite in real-time.
+A Python (Pygame) script reads the data over the serial port.
 
-Sprite movement, rotation, and color reflect the Arduino’s orientation.
+The sprite’s movement, rotation, and color in the Pygame window respond in real time to joystick input.
 
-Use Cases:
+💡 Use Cases
 
-Educational demonstration of wireless sensor control
+Wireless game control prototypes
 
-Motion-controlled gaming prototypes
+Educational demonstrations for serial and Bluetooth communication
 
-Interactive visualization projects
+Interactive robotics and visualization projects
 
-Getting Started:
+Real-time control experiments
 
-Pair HC-05 Bluetooth module with your PC.
+🚀 Getting Started
 
-Upload the Arduino sketch to your Arduino UNO.
+Pair the HC-05 Bluetooth module with your computer.
 
-Run the Python script to visualize and control the 3D sprite.
+Upload the provided Arduino sketch that reads joystick data.
+
+Run the Python (Pygame) script to visualize the sprite’s motion.
+
+Move the joystick — watch the sprite move, rotate, and change color wirelessly in real time!
